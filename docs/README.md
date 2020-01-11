@@ -1,8 +1,9 @@
 # Sen's Notes
 
+## About
 This is the centralized place to maintain my notes
 
-The website is hosted at: <https://github.com/pages/slinjhu/notes>
+The website is hosted at: <https://slinjhu.github.io/notes>
 
 ## Developer Guide (In case I forget)
 The notes are written with Markdown, translated to static html website using [mkdocs](https://mkdocs.org),
