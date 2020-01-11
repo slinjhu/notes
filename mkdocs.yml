@@ -1,0 +1,19 @@
+site_name: Sen's Notes
+repo_url: https://github.com/slinjhu/notes
+theme:
+    name: 'material'
+extra_css:
+    - 'stylesheet.css'
+extra_javascript:
+    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+markdown_extensions:
+    - admonition
+    - pymdownx.arithmatex
+    - pymdownx.details
+    - toc:
+        permalink: true
+nav:
+    - Reading:
+        - 'Ruling the waves': 'reading/ruling-the-waves.md'
+    - Software Engineering:
+        - 'My favorite quotes related to software engineering': 'software/quotes.md'
