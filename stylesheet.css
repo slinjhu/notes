@@ -1,0 +1,21 @@
+body {
+    background-color: #E0E0E0;
+}
+
+.md-content h1 {
+    color: black;
+}
+
+.md-content h2 {
+    color:#0D47A1;
+    font-weight: bolder;
+}
+
+.md-content h3 {
+    color: #1976D2;
+    font-weight: bold;
+}
+
+.md-content h4 {
+    color: #2196F3;
+}
