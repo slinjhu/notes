@@ -18,3 +18,6 @@ and served on [GitHub pages](https://pages.github.com).
 
 ### Publish docs
 - Run `make publish`
+
+### References
+- [Extensions of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/)

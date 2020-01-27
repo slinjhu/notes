@@ -16,5 +16,6 @@ nav:
     - Reading:
         - 'Ruling the waves': 'reading/ruling-the-waves.md'
         - '通往财富自由之路': 'reading/financial-freedom.md'
+        - 'Designing data-intensive applications': 'reading/data-intensive-app.md'
     - Software Engineering:
         - 'My favorite quotes related to software engineering': 'software/quotes.md'
