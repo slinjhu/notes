@@ -296,25 +296,32 @@
     Reliability
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-to-improve-reliability" class="md-nav__link">
-    How to improve reliability
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#scalability" class="md-nav__link">
     Scalability
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#describing-load" class="md-nav__link">
+    Describing load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-performance" class="md-nav__link">
+    Describing performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -323,23 +330,17 @@
     Maintainability
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
-          <li class="md-nav__item">
-  <a href="#how-to-improve-maintainability" class="md-nav__link">
-    How to improve maintainability
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-models-and-query-languages" class="md-nav__link">
+    Data models and query languages
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -426,25 +427,32 @@
     Reliability
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-to-improve-reliability" class="md-nav__link">
-    How to improve reliability
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#scalability" class="md-nav__link">
     Scalability
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#describing-load" class="md-nav__link">
+    Describing load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-performance" class="md-nav__link">
+    Describing performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -453,23 +461,17 @@
     Maintainability
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
-          <li class="md-nav__item">
-  <a href="#how-to-improve-maintainability" class="md-nav__link">
-    How to improve maintainability
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-models-and-query-languages" class="md-nav__link">
+    Data models and query languages
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -510,21 +512,52 @@
 </ul>
 </details>
 <ul>
-<li><strong>Hardware faults</strong>: add redundancy.</li>
+<li><strong>Hardware faults</strong> happen all the time when you have a lot of machines.
+Add <strong>redundancy</strong>.</li>
+<li><strong>Software errors</strong>: different from hardware faults, software errors are usually correlated across nodes.</li>
+<li><strong>Human errors</strong>. Humans are the weakest link in many systems.</li>
 </ul>
-<h4 id="how-to-improve-reliability">How to improve reliability<a class="headerlink" href="#how-to-improve-reliability" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Test the fault-tolerant machinery by deliberately introducing faults <strong>on production</strong>. E.g. <a href="https://github.com/Netflix/chaosmonkey">Netflix Chaos Monkey</a>.<blockquote>
+<details class="note"><summary>Improve fault-tolerance by introducing faults</summary><p>In fault-tolerant systems, it may make sense to deliberately introduce faults <strong>on production</strong>. E.g. <a href="https://github.com/Netflix/chaosmonkey">Netflix Chaos Monkey</a>.</p>
+<blockquote>
 <p>Exposing engineers to failures more frequently incentivizes them to build resilient services.</p>
 </blockquote>
-</li>
-</ul>
+</details>
 <h3 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">&para;</a></h3>
-<h3 id="maintainability">Maintainability<a class="headerlink" href="#maintainability" title="Permanent link">&para;</a></h3>
-<h4 id="how-to-improve-maintainability">How to improve maintainability<a class="headerlink" href="#how-to-improve-maintainability" title="Permanent link">&para;</a></h4>
+<h4 id="describing-load">Describing load<a class="headerlink" href="#describing-load" title="Permanent link">&para;</a></h4>
+<p>Load parameters are different depending on the specific system.
+Generally we need to consider:</p>
 <ul>
-<li><strong>Beginner friendly</strong></li>
+<li>Request per second.</li>
+<li>Ratio of read and write.</li>
+<li>The bottleneck may be dominated by a small number of extreme cases. E.g. celebrities on twitter have millions of followers, while the average may be less than one hundred.</li>
 </ul>
+<h4 id="describing-performance">Describing performance<a class="headerlink" href="#describing-performance" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Throughput</strong>: the number of records we can process per second</li>
+<li><strong>Latency</strong>: how fast the system can respond to clients.</li>
+</ul>
+<details class="note"><summary>Latency vs Response time</summary><ul>
+<li><strong>Latency</strong> is the duration that a request is waiting to be handled.</li>
+<li><strong>Response time</strong> is what clients see: the time between a client sending a request and receiving response, including network delay, queueing delay and processing time.</li>
+</ul>
+</details>
+<details class="note"><summary>Tail latency</summary><ul>
+<li>Since latency varies a lot even for similar requests, we need to think latency as a <strong>distribution</strong> instead of a single number.</li>
+<li>We often care about <strong>99.9th percentile latency</strong> because it directly affects users' experience.</li>
+<li>99.99th percentile latency is often too expensive to improve.</li>
+</ul>
+</details>
+<h3 id="maintainability">Maintainability<a class="headerlink" href="#maintainability" title="Permanent link">&para;</a></h3>
+<p>Majority of the cost of software is not in its initial development, but in its ongoing maintenance.</p>
+<details class="info"><summary>How to measure maintenance?</summary><ul>
+<li>Operability</li>
+<li>Simplicity</li>
+<li>Evolvability</li>
+<li>Beginner friendliness</li>
+</ul>
+</details>
+<h2 id="data-models-and-query-languages">Data models and query languages<a class="headerlink" href="#data-models-and-query-languages" title="Permanent link">&para;</a></h2>
+<p>Data models have a profound effect on how we think about the problems that we are solving.</p>
                 
                   
                 
