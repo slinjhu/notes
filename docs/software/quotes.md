@@ -13,12 +13,17 @@
 - Adding manpower to a late software project makes it later. by Fred Brooks
 - Nine women cannot make a baby in one month. by Fred Brooks
 
+## Communication
+- Any organization that designs a system will inevitably produce a design whose structure is a copy of the organization’s communication structure. known as Conway's law
+- Any fool can write code that a computer can understand. Good programmers write code that humans can understand. by Martin Fowler
+- Good communication skills directly correlate with good development skills. by Damien Filiatrault
 
 ## Software and humanity
-- Any organization that designs a system will inevitably produce a design whose structure is a copy of the organization’s communication structure. known as Conway's law
 - No matter how it looks at first, it’s always a people problem. by Gerald M. Weinberg, Secrets of Consulting
-- Good programmers write code that humans can understand. by Martin Fowler
 - Prolific programmers contribute to certain disaster. by Niklaus Wirth
+
+## Simplicity
+- Simplicity is prerequisite for reliability. by Edsger Dijkstra
 
 ## Jokes
 - To understand recursion, you must first understand recursion.
