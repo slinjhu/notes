@@ -19,3 +19,4 @@ nav:
         - 'Designing data-intensive applications': 'reading/data-intensive-app.md'
     - Software Engineering:
         - 'My favorite quotes related to software engineering': 'software/quotes.md'
+        - 'My Configurations': 'software/my-config.md'
