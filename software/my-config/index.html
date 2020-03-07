@@ -336,8 +336,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gitconfig" class="md-nav__link">
-    ~/.gitconfig
+  <a href="#git-gitconfig" class="md-nav__link">
+    Git ~/.gitconfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs-code-settingsjson" class="md-nav__link">
+    VS Code settings.json
   </a>
   
 </li>
@@ -379,8 +386,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gitconfig" class="md-nav__link">
-    ~/.gitconfig
+  <a href="#git-gitconfig" class="md-nav__link">
+    Git ~/.gitconfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs-code-settingsjson" class="md-nav__link">
+    VS Code settings.json
   </a>
   
 </li>
@@ -405,13 +419,26 @@
                 
                 
                 <h1 id="my-configurations">My Configurations<a class="headerlink" href="#my-configurations" title="Permanent link">&para;</a></h1>
-<h2 id="gitconfig"><code>~/.gitconfig</code><a class="headerlink" href="#gitconfig" title="Permanent link">&para;</a></h2>
+<h2 id="git-gitconfig">Git <code>~/.gitconfig</code><a class="headerlink" href="#git-gitconfig" title="Permanent link">&para;</a></h2>
 <pre><code>[alias]
     cleanall = clean -xfd
     pop = reset --hard HEAD~1
     append = commit -a --amend --no-edit
     difflast = diff --binary HEAD~1 HEAD
     logs = log --abbrev-commit --oneline
+</code></pre>
+
+<h2 id="vs-code-settingsjson">VS Code <code>settings.json</code><a class="headerlink" href="#vs-code-settingsjson" title="Permanent link">&para;</a></h2>
+<pre><code>{
+    &quot;editor.minimap.enabled&quot;: false,
+    &quot;files.trimTrailingWhitespace&quot;: true,
+    &quot;editor.renderWhitespace&quot;: &quot;all&quot;,
+    &quot;editor.parameterHints.enabled&quot;: false,
+    &quot;files.exclude&quot;: {
+        &quot;env&quot;: true,
+        &quot;.vscode&quot;: true
+    }
+}
 </code></pre>
                 
                   
