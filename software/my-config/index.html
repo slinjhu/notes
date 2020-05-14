@@ -373,6 +373,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#zsh-zshrc" class="md-nav__link">
+    Zsh ~/.zshrc
+  </a>
+  
+</li>
+      
       
       
       
@@ -459,6 +466,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#zsh-zshrc" class="md-nav__link">
+    Zsh ~/.zshrc
+  </a>
+  
+</li>
+      
       
       
       
@@ -486,6 +500,8 @@
     append = commit -a --amend --no-edit
     difflast = diff --binary HEAD~1 HEAD
     logs = log --abbrev-commit --oneline
+[push]
+    default = current
 </code></pre>
 
 <h2 id="vs-code-settingsjson">VS Code <code>settings.json</code><a class="headerlink" href="#vs-code-settingsjson" title="Permanent link">&para;</a></h2>
@@ -497,8 +513,22 @@
     &quot;files.exclude&quot;: {
         &quot;env&quot;: true,
         &quot;.vscode&quot;: true
-    }
+    },
+    &quot;telemetry.enableTelemetry&quot;: false,
+    &quot;telemetry.enableCrashReporter&quot;: false,
+    &quot;explorer.confirmDragAndDrop&quot;: false
 }
+</code></pre>
+
+<h2 id="zsh-zshrc">Zsh <code>~/.zshrc</code><a class="headerlink" href="#zsh-zshrc" title="Permanent link">&para;</a></h2>
+<pre><code># Setup kubectl
+source &lt;(kubectl completion zsh)
+alias k=kubectl
+complete -F __start_kubectl k
+
+# Use VS Code as the default text editor
+export EDITOR='code -w'
+
 </code></pre>
                 
                   
