@@ -19,8 +19,10 @@ nav:
         - 'Designing data-intensive applications': 'reading/data-intensive-app.md'
         - 'The most important things': 'reading/important-things.md'
         - 'The art of negotiation': 'reading/negotiation.md'
+        - 'Master class': 'reading/master-class.md'
     - Software Engineering:
         - 'My favorite quotes related to software engineering': 'software/quotes.md'
         - 'My Configurations': 'software/my-config.md'
+        - 'Software quick references': 'software/quick-ref.md'
     - English:
         - 'Powerful phrases': 'english/powerful-phrases.md'
