@@ -1,7 +1,7 @@
 site_name: Sen's Notes
 repo_url: https://github.com/slinjhu/notes
 theme:
-    name: 'material'
+    name: 'readthedocs'
 extra_css:
     - 'stylesheet.css'
 extra_javascript:
@@ -12,6 +12,7 @@ markdown_extensions:
     - pymdownx.details
     - toc:
         permalink: true
+
 nav:
     - Reading:
         - 'Ruling the waves': 'reading/ruling-the-waves.md'

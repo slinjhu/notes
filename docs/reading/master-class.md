@@ -25,7 +25,7 @@ Now you are in space, but now really it is just the beginning.
 #### Create strong relationship through leadership
 - The other crew member are all super competent astronauts. So you can count on good individual decisions almost all the time.
 - The real role of the commander comes in two different times. One is developing, training and building the crew to get ready to launch. The second is if you have a serious problem onboard.
-- I worked with my crew through years in preparation. In fact, it was back in my mind a decade before I became a commander. I would look around the office.
+- I worked with my crew through years in preparation. In fact, it was back in my mind a decade **before** I became a commander. I would look around the office.
 I would gonna be in space with some of these people, and I don't know which one they are going to be yet, but let's think about what sort of relationship I should have with everybody? How should I be viewed? What type of traits do I need to develop in myself? Which of these people is a great leader? What are they doing that makes them a good leader? How can I modify myself? How can I be in a position that no matter who I'm chosen with, I'm gonna like them and we are gonna be able to work together and do complicated things?
 - When you get assigned a crew, then you are trying to make sure that the crew is protected, that they get the training that they need, that they feel fulfilled, that they're pursuing their own personal and profession objectives all the way through the training process.
 - The real ultimate test of being a commander is when something goes drastically wrong. You have to respond immediately.
