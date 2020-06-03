@@ -21,6 +21,7 @@ nav:
         - 'The most important things': 'reading/important-things.md'
         - 'The art of negotiation': 'reading/negotiation.md'
         - 'Master class': 'reading/master-class.md'
+        - '道理': 'reading/philosophy.md'
     - Software Engineering:
         - 'My favorite quotes related to software engineering': 'software/quotes.md'
         - 'My Configurations': 'software/my-config.md'
