@@ -51,3 +51,24 @@ h4:before {
     content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) ". ";
     counter-increment : h4;
 }
+
+
+.wy-nav-content {
+    max-width: 1200px;
+}
+
+.rst-content img {
+    max-width: 900px;
+}
+
+.rst-content th, td {
+    padding: 5px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.rst-content code {
+    color: brown;
+}

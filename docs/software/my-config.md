@@ -35,6 +35,9 @@
 source <(kubectl completion zsh)
 alias k=kubectl
 complete -F __start_kubectl k
+function kssh(){
+    kubectl exec --stdin --tty $1 -- /bin/bash
+}
 
 # Use VS Code as the default text editor
 export EDITOR='code -w'
