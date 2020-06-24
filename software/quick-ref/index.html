@@ -75,6 +75,26 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kubernetes">Kubernetes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#kubernetes-object">Kubernetes object</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pod">Pod</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#service">Service</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#helm">Helm</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#concepts">Concepts</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#aws">AWS</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#aws-cloudformation">AWS CloudFormation</a>
@@ -94,6 +114,12 @@
     <li class="toctree-l4"><a class="reference internal" href="#tables">Tables</a>
     </li>
         </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jq">Jq</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dealing-with-array">Dealing with array</a>
     </li>
         </ul>
     </li>
@@ -146,6 +172,39 @@
               
                 <h1 id="software-quick-references">Software Quick References<a class="headerlink" href="#software-quick-references" title="Permanent link">&para;</a></h1>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<h2 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<p><img alt="Kubernetes Architecture" src="/img/components-of-kubernetes.png" /></p>
+<ul>
+<li>Kubernetes master: three processes running on a single node:<ul>
+<li><code>kube-api-server</code></li>
+<li><code>kube-controller-manager</code></li>
+<li><code>kube-scheduler</code></li>
+</ul>
+</li>
+<li>Kubernetes nodes: worker machines that can run containerized applications.<ul>
+<li><code>kubelet</code>: communicates with the master</li>
+<li><code>kube-proxy</code></li>
+</ul>
+</li>
+<li><code>etcd</code>: consistent and highly-available key value store used as Kubernetes' backing store for all cluster data</li>
+</ul>
+<h3 id="kubernetes-object">Kubernetes object<a class="headerlink" href="#kubernetes-object" title="Permanent link">&para;</a></h3>
+<p>Kubernetes object are persistent entities in the Kubernetes system to represent the state of your cluster.</p>
+<h4 id="pod">Pod<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A basic execution unit of a Kubernetes application.</li>
+<li>The smallest the simplest unit in the Kubernetes object model that you can create or deploy.</li>
+</ul>
+<h4 id="service">Service<a class="headerlink" href="#service" title="Permanent link">&para;</a></h4>
+<h2 id="helm">Helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h2>
+<p>Helm is a package manager for Kubernetes</p>
+<h3 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A <strong>Chart</strong> is a Helm package. It contains all of the resource definitions necessary to run an application inside a Kubernetes cluster.</li>
+<li>A <strong>Repository</strong> is the place where charts can be collected and shared.</li>
+<li>A <strong>Release</strong> is an instance of a chart running in a Kubernetes cluster.</li>
+</ul>
 <h2 id="aws">AWS<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h2>
 <h3 id="aws-cloudformation">AWS CloudFormation<a class="headerlink" href="#aws-cloudformation" title="Permanent link">&para;</a></h3>
 <ul>
@@ -161,12 +220,7 @@
 <h3 id="postgres-cheat-sheet">Postgres cheat sheet<a class="headerlink" href="#postgres-cheat-sheet" title="Permanent link">&para;</a></h3>
 <h4 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Connect to database in terminal:</li>
-</ul>
-<pre><code>PGPASSWORD=*** psql &quot;host=*** user=*** dbname=postgres sslmode=require&quot;
-</code></pre>
-
-<ul>
+<li>Connect to database in terminal: <code>PGPASSWORD=*** psql "host=*** user=*** dbname=postgres sslmode=require"</code></li>
 <li><code>\conninfo</code>: Print out connection information</li>
 </ul>
 <h4 id="databases">Databases<a class="headerlink" href="#databases" title="Permanent link">&para;</a></h4>
@@ -179,6 +233,39 @@
 <li><code>\dt</code>: List all tables.</li>
 <li><code>\d+ &lt;table_name&gt;</code>: Get detailed information of a table.</li>
 </ul>
+<h2 id="jq">Jq<a class="headerlink" href="#jq" title="Permanent link">&para;</a></h2>
+<h3 id="dealing-with-array">Dealing with array<a class="headerlink" href="#dealing-with-array" title="Permanent link">&para;</a></h3>
+<p>Suppose we have json data:</p>
+<pre><code class="json">[{
+    &quot;key&quot;: 1,
+    &quot;value&quot;: &quot;one&quot;
+}, {
+    &quot;key&quot;: 2,
+    &quot;value&quot;: &quot;two&quot;
+}]
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left">Description</th>
+<th align="left">Filter</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Convert it to an object or dict</td>
+<td align="left"><code>map({(.key|tostring): .value}) | add</code></td>
+<td align="left"><code>{"1": "one","2": "two"}</code></td>
+</tr>
+<tr>
+<td align="left">Select a subset</td>
+<td align="left"><code>map(select(.key==1))</code></td>
+<td align="left"><code>[{"key": 1, "value": "one"}]</code></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
