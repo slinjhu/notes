@@ -98,6 +98,10 @@
     <li class="toctree-l2"><a class="reference internal" href="#aws">AWS</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#aws-cloudformation">AWS CloudFormation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aws-cloudformation-cheat-sheet">AWS CloudFormation cheat sheet</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -212,6 +216,20 @@
 <li>Stack: a single unit that you manage related resources in AWS CloudFormation</li>
 <li>Change set: a summary of changes to a stack.</li>
 </ul>
+<h4 id="aws-cloudformation-cheat-sheet">AWS CloudFormation cheat sheet<a class="headerlink" href="#aws-cloudformation-cheat-sheet" title="Permanent link">&para;</a></h4>
+<h5 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link">&para;</a></h5>
+<ul>
+<li>List names of activate stacks</li>
+</ul>
+<pre><code>aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE ROLLBACK_COMPLETE UPDATE_ROLLBACK_COMPLETE | jq -r '.StackSummaries | .[] | .StackName'
+</code></pre>
+
+<ul>
+<li>Get the template used to create a stack</li>
+</ul>
+<pre><code>aws cloudformation get-template --stack-name  &lt;stack-name&gt; | jq -r '.TemplateBody'
+</code></pre>
+
 <h2 id="google-cloud-platform">Google Cloud Platform<a class="headerlink" href="#google-cloud-platform" title="Permanent link">&para;</a></h2>
 <h2 id="postgres">Postgres<a class="headerlink" href="#postgres" title="Permanent link">&para;</a></h2>
 <ul>
