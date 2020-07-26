@@ -25,6 +25,9 @@ Kubernetes object are persistent entities in the Kubernetes system to represent 
 
 #### Service
 
+#### Others
+- DaemonSet: A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.
+
 ## Helm
 Helm is a package manager for Kubernetes
 ### Concepts

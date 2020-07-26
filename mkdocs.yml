@@ -19,7 +19,6 @@ nav:
         - '通往财富自由之路': 'reading/financial-freedom.md'
         - 'Designing data-intensive applications': 'reading/data-intensive-app.md'
         - 'The most important things': 'reading/important-things.md'
-        - 'The art of negotiation': 'reading/negotiation.md'
         - 'Master class': 'reading/master-class.md'
         - '道理': 'reading/philosophy.md'
     - Software Engineering:
@@ -28,3 +27,5 @@ nav:
         - 'Software quick references': 'software/quick-ref.md'
     - English:
         - 'Powerful phrases': 'english/powerful-phrases.md'
+    - Others:
+        - 'Fishing in California': 'others/fishing.md'

@@ -44,3 +44,47 @@ I would gonna be in space with some of these people, and I don't know which one 
 - For me the best way to do that, is just initially learn the whole thing, and then boil it down to the part that is your interface.
 - There is big complex theory behind it, but how are you interacting with it. If there is no way for me to interact with it, then it doesn't really matter; it is somebody else's concern, but not mine.
 - Start with the big information, boil out the parts that are really critical to you, and put them on a page so that when you're about to do the job, you can read it, and suddenly it is all there in your head.
+
+
+## "Art of Negotiation" by Chris Voss
+### Collaboration
+Great negotiation is about collaboration.
+
+> The adversary is not the person across the table; the adversary is the situation. The person across the table is a counterpart that is struggling with some aspects of the same problem as you are.
+
+Negotiation was seen as a zero-sum game for a long time, but there is a better way.
+The idea is to realize that the situation is the adversary, and the person across the table is actually your negotiating partner --- a person who is to be worked with, not against, in pursuit of a mutually beneficial outcome.
+
+Effective negotiation is collaborative. In the spirit of collaboration, your overarching goals should include:
+
+- Doing all you can to show the other side that you are negotiating **in good faith**.
+You are not here to deceive or exploit the other side. Sometimes showing deference can be key.
+- Becoming genuinely interested in what drives the other side. Understanding their goals, motivations, wants and fears will help you navigate the negotiation effectively.
+- Building trust-based influence through the use of **tactical empathy**.
+- Work to deactivate negative emotions.
+- Aim to magnify positive emotions.
+
+### Tactical empathy
+- Empathy is becoming completely aware of the other side's perspective, their point of view, their take on things, how they see it, and wha they feel.
+- It is not agreement in any way. It is not compassion, not sympathy.
+- Let's tactically take what we know to be the case, and apply it in our interactions.
+- If you can really get at what's driving someone, you can change their outlook, and you can change their decision making.
+- You have to understand what their rules are, and you have to respect (not necessarily adopt) these.
+
+??? note "Empathy, compassion vs sympathy"
+    - Empathy is the **ability** to share another person’s feelings and emotions as if they were your own.
+    - Sympathy: If you have sympathy for someone who is in a bad situation, you are sorry for them, and show this in the way you behave toward them.
+    - Compassion is a feeling of pity, sympathy, and understanding for someone who is suffering.
+
+### Mirroring
+- The common misconception about negotiation is that you have to make your argument.
+- You need to find out what is possible, and you need to engage the other side in what their thoughts are, so they feel involved in the process, and consequently they want the deal to happen.
+
+Mirroring: simple repetition of 1 to 3 words of what someone just said, using a great tone of voice, genuine curiosity.
+
+- Use mirroring to get the other side feel like they're involved, and to tease out information.
+- The other person feels being listened to.
+- When people go on with further explanation, they are gonna add more words; they are gonna change their terms.
+- Do not say "What do you mean by xxx?". People often thought they chose the perfect words and may feel irritated.
+- Mirroring is also a rapport building process. Interesting people are interested. You are interesting to other people because you are interested in them.
+- In confrontational conversations, mirroring can avoid fighting.
