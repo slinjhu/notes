@@ -232,13 +232,11 @@
 </ul>
 <pre><code>aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE ROLLBACK_COMPLETE UPDATE_ROLLBACK_COMPLETE | jq -r '.StackSummaries | .[] | .StackName'
 </code></pre>
-
 <ul>
 <li>Get the template used to create a stack</li>
 </ul>
 <pre><code>aws cloudformation get-template --stack-name  &lt;stack-name&gt; | jq -r '.TemplateBody'
 </code></pre>
-
 <h2 id="google-cloud-platform">Google Cloud Platform<a class="headerlink" href="#google-cloud-platform" title="Permanent link">&para;</a></h2>
 <h2 id="postgres">Postgres<a class="headerlink" href="#postgres" title="Permanent link">&para;</a></h2>
 <ul>
@@ -263,7 +261,7 @@
 <h2 id="jq">Jq<a class="headerlink" href="#jq" title="Permanent link">&para;</a></h2>
 <h3 id="dealing-with-array">Dealing with array<a class="headerlink" href="#dealing-with-array" title="Permanent link">&para;</a></h3>
 <p>Suppose we have json data:</p>
-<pre><code class="json">[{
+<pre><code class="language-json">[{
     &quot;key&quot;: 1,
     &quot;value&quot;: &quot;one&quot;
 }, {
@@ -271,7 +269,6 @@
     &quot;value&quot;: &quot;two&quot;
 }]
 </code></pre>
-
 <table>
 <thead>
 <tr>
