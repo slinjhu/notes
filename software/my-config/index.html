@@ -79,6 +79,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../quick-ref/">Software quick references</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../data-structures/">Data Structures and Algorithms</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">English</span></p>
                 <ul>
@@ -131,7 +133,7 @@
               
                 <h1 id="my-configurations">My Configurations<a class="headerlink" href="#my-configurations" title="Permanent link">&para;</a></h1>
 <h2 id="git-gitconfig">Git <code>~/.gitconfig</code><a class="headerlink" href="#git-gitconfig" title="Permanent link">&para;</a></h2>
-<pre><code>[alias]
+<div class="highlight"><pre><span></span><code>[alias]
     cleanall = clean -xfd
     pop = reset --hard HEAD~1
     append = commit -a --amend --no-edit
@@ -139,9 +141,9 @@
     logs = log --abbrev-commit --oneline
 [push]
     default = current
-</code></pre>
+</code></pre></div>
 <h2 id="vs-code-settingsjson">VS Code <code>settings.json</code><a class="headerlink" href="#vs-code-settingsjson" title="Permanent link">&para;</a></h2>
-<pre><code>{
+<div class="highlight"><pre><span></span><code>{
     &quot;editor.minimap.enabled&quot;: false,
     &quot;files.trimTrailingWhitespace&quot;: true,
     &quot;editor.renderWhitespace&quot;: &quot;all&quot;,
@@ -154,9 +156,9 @@
     &quot;telemetry.enableCrashReporter&quot;: false,
     &quot;explorer.confirmDragAndDrop&quot;: false
 }
-</code></pre>
+</code></pre></div>
 <h2 id="zsh-zshrc">Zsh <code>~/.zshrc</code><a class="headerlink" href="#zsh-zshrc" title="Permanent link">&para;</a></h2>
-<pre><code># Setup kubectl
+<div class="highlight"><pre><span></span><code># Setup kubectl
 source &lt;(kubectl completion zsh)
 alias k=kubectl
 complete -F __start_kubectl k
@@ -165,9 +167,8 @@ function kssh(){
 }
 
 # Use VS Code as the default text editor
-export EDITOR='code -w'
-
-</code></pre>
+export EDITOR=&#39;code -w&#39;
+</code></pre></div>
               
             </div>
           </div>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Data Structures and Algorithms - Sen's Notes</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../stylesheet.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data Structures and Algorithms";
+    var mkdocs_page_input_path = "software/data-structures.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Sen's Notes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../reading/ruling-the-waves/">Ruling the waves</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../reading/financial-freedom/">通往财富自由之路</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../reading/data-intensive-app/">Designing data-intensive applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../reading/important-things/">The most important things</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../reading/master-class/">Master class</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../reading/philosophy/">道理</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software Engineering</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../quotes/">My favorite quotes related to software engineering</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../my-config/">My Configurations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../quick-ref/">Software quick references</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Data Structures and Algorithms</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#array">Array</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#binary-search-with-2-states">Binary Search with 2 states</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#binary-search-with-3-states">Binary Search with 3 states</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linked-list">Linked List</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#singly-linked-list">Singly Linked List</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#traversal">Traversal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#insert-after-a-given-node">Insert after a given node</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-node-after-another-given-node">Move node after another given node</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove-node-after-a-given-one">Remove node after a given one</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#doubly-linked-list">Doubly linked list</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#insert">Insert</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move">Move</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove">Remove</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#graph">Graph</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tree">Tree</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#binary-tree">Binary tree</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#binary-search-tree">Binary search tree</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#heap">Heap</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">English</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../english/powerful-phrases/">Powerful phrases</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Others</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../others/fishing/">Fishing in California</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Sen's Notes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Software Engineering &raquo;</li>
+        
+      
+    
+    <li>Data Structures and Algorithms</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/slinjhu/notes/edit/master/docs/software/data-structures.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="data-structures-and-algorithms">Data Structures and Algorithms<a class="headerlink" href="#data-structures-and-algorithms" title="Permanent link">&para;</a></h1>
+<h2 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h2>
+<h3 id="binary-search-with-2-states">Binary Search with 2 states<a class="headerlink" href="#binary-search-with-2-states" title="Permanent link">&para;</a></h3>
+<p>This is useful for searching the first/last elements satisfying a given binary condition.</p>
+<p><img alt="" src="../img/data-structure/binary-search2.png" /></p>
+<div class="highlight"><pre><span></span><code>def binary_search2(xx, target):
+    &quot;&quot;&quot;
+    Binary search with 2 states
+    :param xx: an increasing sorted array of integers. Duplicates allowed.
+    :param target:
+    :return: index of the 1st occurrence if found, otherwise the insertion index
+    &quot;&quot;&quot;
+    left, right = -1, len(xx)
+    while left + 1 &lt; right:
+        mid = (left + right) // 2
+        if xx[mid] &gt;= target:
+            right = mid
+        else:
+            left = mid
+    return right
+</code></pre></div>
+<p>Notes:</p>
+<ul>
+<li>Add virtual boundaries to handle corner cases of empty array or single state.</li>
+<li>In the end, <code>left</code> and <code>right</code> mark ending and starting of two states.</li>
+</ul>
+<h3 id="binary-search-with-3-states">Binary Search with 3 states<a class="headerlink" href="#binary-search-with-3-states" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/data-structure/binary-search3.png" /></p>
+<div class="highlight"><pre><span></span><code>def binary_search3(xx, target):
+    &quot;&quot;&quot;
+    :param xx: an increasingly sorted array of integers. Duplicates allowed.
+    :param target:
+    :return: index of ANY occurrence if found, otherwise the insertion index
+    &quot;&quot;&quot;
+    u1, u2 = 0, len(xx) - 1
+    while u1 &lt;= u2:
+        mid = (u1 + u2) // 2
+        if xx[mid] == target:
+            return mid
+        elif xx[mid] &lt; target:
+            u1 = mid + 1
+        else:
+            u2 = mid - 1
+    return u1
+</code></pre></div>
+<p>Notes:</p>
+<ul>
+<li><code>u1</code> and <code>u2</code> marks the range of unknown areas, which gradually shrinks during search.</li>
+<li>In the end, if target not found, <code>u1</code> and <code>u2</code> run across each other. The unknown range is also zero.</li>
+</ul>
+<h2 id="linked-list">Linked List<a class="headerlink" href="#linked-list" title="Permanent link">&para;</a></h2>
+<h3 id="singly-linked-list">Singly Linked List<a class="headerlink" href="#singly-linked-list" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>class ListNode:
+    def __init__(self, value=None):
+        self.value = value
+        self.next = None
+</code></pre></div>
+<details class="dummy head" open="open"><summary>Dummy</summary><p>Add a dummy head such that we do not need to specially treat the corner case of empty list.</p>
+</details>
+<h4 id="traversal">Traversal<a class="headerlink" href="#traversal" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>def get_tail(head):
+    pt = head
+    while pt and pt.next:
+        pt = pt.next
+    return pt
+</code></pre></div>
+<h4 id="insert-after-a-given-node">Insert after a given node<a class="headerlink" href="#insert-after-a-given-node" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/singly-linked-list-insert.png" /></p>
+<div class="highlight"><pre><span></span><code>from .list_node import ListNode
+
+
+def insert_after(node, value):
+    assert node is not None
+    new_node = ListNode(value)
+    new_node.next = node.next
+    node.next = new_node
+    return new_node
+</code></pre></div>
+<h4 id="move-node-after-another-given-node">Move node after another given node<a class="headerlink" href="#move-node-after-another-given-node" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/singly-linked-list-move.png" /></p>
+<div class="highlight"><pre><span></span><code>from .list_node import ListNode
+
+
+def move_after(src, dest):
+    if src and src.next and dest:
+        to_move = src.next
+        src.next = to_move.next
+        to_move.next = dest.next
+        dest.next = to_move
+</code></pre></div>
+<h4 id="remove-node-after-a-given-one">Remove node after a given one<a class="headerlink" href="#remove-node-after-a-given-one" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/singly-linked-list-remove.png" /></p>
+<div class="highlight"><pre><span></span><code>from .list_node import ListNode
+
+
+def remove_after(node):
+    if node and node.next:
+        node.next = node.next.next
+</code></pre></div>
+<h3 id="doubly-linked-list">Doubly linked list<a class="headerlink" href="#doubly-linked-list" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>class ListNode:
+    def __init__(self, value=None):
+        self.value = value
+        self.next = None
+        self.previous = None
+</code></pre></div>
+<h4 id="insert">Insert<a class="headerlink" href="#insert" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/doubly-linked-list-insert.png" /></p>
+<div class="highlight"><pre><span></span><code>from .list_node import ListNode
+
+
+def insert_after(node, value):
+    assert node is not None
+    new_node = ListNode(value)
+    new_node.previous = node
+    new_node.next = node.next
+    node.next.previous = new_node
+    node.next = new_node
+</code></pre></div>
+<h4 id="move">Move<a class="headerlink" href="#move" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/doubly-linked-list-move.png" /></p>
+<div class="highlight"><pre><span></span><code>from .list_node import ListNode
+
+
+def move_this(src: ListNode, dest: ListNode):
+    &quot;&quot;&quot;Move src to dest.next&quot;&quot;&quot;
+    # Unlink src from the list
+    src.previous.next = src.next
+    src.next.previous = src.previous
+
+    # Insert src after dest
+    src.previous = dest
+    src.next = dest.next
+    dest.next.previous = src
+    dest.next = src
+</code></pre></div>
+<h4 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/doubly-linked-list-remove.png" /></p>
+<div class="highlight"><pre><span></span><code>def remove_this(node):
+    if node and node.previous:
+        node.previous.next = node.next
+    if node and node.next:
+        node.next.previous = node.previous
+</code></pre></div>
+<h2 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h2>
+<h2 id="tree">Tree<a class="headerlink" href="#tree" title="Permanent link">&para;</a></h2>
+<h3 id="binary-tree">Binary tree<a class="headerlink" href="#binary-tree" title="Permanent link">&para;</a></h3>
+<h3 id="binary-search-tree">Binary search tree<a class="headerlink" href="#binary-search-tree" title="Permanent link">&para;</a></h3>
+<h3 id="heap">Heap<a class="headerlink" href="#heap" title="Permanent link">&para;</a></h3>
+<p>Heaps are special <mark>complete binary</mark> trees.</p>
+<ul>
+<li>Max heap: For all node, <code>node.value</code> <span><span class="MathJax_Preview">\ge</span><script type="math/tex">\ge</script></span> value of all recursive children.</li>
+<li>Min heap: For all node, <code>node.value</code> <span><span class="MathJax_Preview">\le</span><script type="math/tex">\le</script></span> value of all recursive children.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../english/powerful-phrases/" class="btn btn-neutral float-right" title="Powerful phrases">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../quick-ref/" class="btn btn-neutral" title="Software quick references"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/slinjhu/notes/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../quick-ref/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../english/powerful-phrases/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
