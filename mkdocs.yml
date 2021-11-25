@@ -10,6 +10,13 @@ markdown_extensions:
     - admonition
     - pymdownx.arithmatex
     - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.magiclink
+    - pymdownx.snippets
+    - pymdownx.tabbed
+    - pymdownx.mark
+    - pymdownx.emoji
     - toc:
         permalink: true
 
@@ -25,6 +32,7 @@ nav:
         - 'My favorite quotes related to software engineering': 'software/quotes.md'
         - 'My Configurations': 'software/my-config.md'
         - 'Software quick references': 'software/quick-ref.md'
+        - 'Data Structures and Algorithms': 'software/data-structures.md'
     - English:
         - 'Powerful phrases': 'english/powerful-phrases.md'
     - Others:

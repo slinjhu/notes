@@ -2,3 +2,5 @@
 .idea
 env
 site
+*.pyc
+__pycache__
