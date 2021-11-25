@@ -10,10 +10,10 @@ This is useful for searching the first/last elements satisfying a given binary c
 --8<-- "docs/software/src/array/binary_search2.py"
 ```
 
-Notes:
+??? Notes
+    - Add virtual boundaries to handle corner cases of empty array or single state.
+    - In the end, `left` and `right` mark ending and starting of two states.
 
-- Add virtual boundaries to handle corner cases of empty array or single state.
-- In the end, `left` and `right` mark ending and starting of two states.
 
 ### Binary Search with 3 states
 ![](img/data-structure/binary-search3.png)
@@ -36,8 +36,8 @@ Notes:
 --8<-- "docs/software/src/singly_linked_list/list_node.py"
 ```
 
-???+ Dummy Head
-    Add a dummy head such that we do not need to specially treat the corner case of empty list.
+???+ "Dummy Head"
+    Add a dummy head such that we do not need to specially treat the corner case of `None` head.
 
 #### Traversal
 ```
