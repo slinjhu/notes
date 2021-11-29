@@ -110,9 +110,36 @@ Notes:
 
 ## Tree
 ### Binary tree
+#### Complete Binary Tree
+![](img/data-structure/complete-binary-tree.png)
+
+A complete binary can be implemented with a flat array. Using 0-based indices, node `k` has
+
+- Left child: `2k + 1`
+- Right child: `2k + 2`
+- Parent: ${k - 1 \over 2}$
+
+
+
+#### DFS (Depth First Search)
+- Pre-order: visit the parent first
+- In-order: visit the left child first, and then the parent, and right child finally.
+- Post-order: visit the parent last.
+
+![](img/data-structure/binary-tree-dfs.png)
+
+```
+--8<-- "docs/software/src/tree/dfs.py"
+```
+
+
 ### Binary search tree
 ### Heap
-Heaps are special ==complete binary== trees.
+Heaps are special ==complete binary== trees (but right leaves can be omitted) that satisfies heap invariant.
+
+
+
+
 
 - Max heap: For all node, `node.value` $\ge$ value of all recursive children.
 - Min heap: For all node, `node.value` $\le$ value of all recursive children.
