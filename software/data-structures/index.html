@@ -112,6 +112,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#tree">Tree</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#binary-tree">Binary tree</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#complete-binary-tree">Complete Binary Tree</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dfs-depth-first-search">DFS (Depth First Search)</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#binary-search-tree">Binary search tree</a>
     </li>
@@ -192,11 +198,11 @@
             left = mid
     return right
 </code></pre></div>
-<p>Notes:</p>
-<ul>
+<details class="notes"><summary>Notes</summary><ul>
 <li>Add virtual boundaries to handle corner cases of empty array or single state.</li>
 <li>In the end, <code>left</code> and <code>right</code> mark ending and starting of two states.</li>
 </ul>
+</details>
 <h3 id="binary-search-with-3-states">Binary Search with 3 states<a class="headerlink" href="#binary-search-with-3-states" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/data-structure/binary-search3.png" /></p>
 <div class="highlight"><pre><span></span><code>def binary_search3(xx, target):
@@ -228,7 +234,7 @@
         self.value = value
         self.next = None
 </code></pre></div>
-<details class="dummy head" open="open"><summary>Dummy</summary><p>Add a dummy head such that we do not need to specially treat the corner case of empty list.</p>
+<details open="open"><summary>Dummy Head</summary><p>Add a dummy head such that we do not need to specially treat the corner case of <code>None</code> head.</p>
 </details>
 <h4 id="traversal">Traversal<a class="headerlink" href="#traversal" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>def get_tail(head):
@@ -318,9 +324,45 @@ def move_this(src: ListNode, dest: ListNode):
 <h2 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h2>
 <h2 id="tree">Tree<a class="headerlink" href="#tree" title="Permanent link">&para;</a></h2>
 <h3 id="binary-tree">Binary tree<a class="headerlink" href="#binary-tree" title="Permanent link">&para;</a></h3>
+<h4 id="complete-binary-tree">Complete Binary Tree<a class="headerlink" href="#complete-binary-tree" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/data-structure/complete-binary-tree.png" /></p>
+<p>A complete binary can be implemented with a flat array. Using 0-based indices, node <code>k</code> has</p>
+<ul>
+<li>Left child: <code>2k + 1</code></li>
+<li>Right child: <code>2k + 2</code></li>
+<li>Parent: <span><span class="MathJax_Preview">{k - 1 \over 2}</span><script type="math/tex">{k - 1 \over 2}</script></span></li>
+</ul>
+<h4 id="dfs-depth-first-search">DFS (Depth First Search)<a class="headerlink" href="#dfs-depth-first-search" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Pre-order: visit the parent first</li>
+<li>In-order: visit the left child first, and then the parent, and right child finally.</li>
+<li>Post-order: visit the parent last.</li>
+</ul>
+<p><img alt="" src="../img/data-structure/binary-tree-dfs.png" /></p>
+<div class="highlight"><pre><span></span><code>import binarytree
+from collections import defaultdict
+
+
+def dfs(node: binarytree.Node):
+    if node:
+        values[&#39;pre-order&#39;].append(node.value)
+        dfs(node.left)
+        values[&#39;in-order&#39;].append(node.value)
+        dfs(node.right)
+        values[&#39;post-order&#39;].append(node.value)
+
+
+if __name__ == &#39;__main__&#39;:
+    values = defaultdict(list)
+    root = binarytree.tree(height=2, is_perfect=True)
+    dfs(root)
+    print(root)
+    for k, v in values.items():
+        print(f&#39;{k}\t: {v}&#39;)
+</code></pre></div>
 <h3 id="binary-search-tree">Binary search tree<a class="headerlink" href="#binary-search-tree" title="Permanent link">&para;</a></h3>
 <h3 id="heap">Heap<a class="headerlink" href="#heap" title="Permanent link">&para;</a></h3>
-<p>Heaps are special <mark>complete binary</mark> trees.</p>
+<p>Heaps are special <mark>complete binary</mark> trees (but right leaves can be omitted) that satisfies heap invariant.</p>
 <ul>
 <li>Max heap: For all node, <code>node.value</code> <span><span class="MathJax_Preview">\ge</span><script type="math/tex">\ge</script></span> value of all recursive children.</li>
 <li>Min heap: For all node, <code>node.value</code> <span><span class="MathJax_Preview">\le</span><script type="math/tex">\le</script></span> value of all recursive children.</li>
@@ -373,6 +415,7 @@ def move_this(src: ListNode, dest: ListNode):
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../extra.js" defer></script>
       <script src="../../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
